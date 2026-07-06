@@ -1,0 +1,30 @@
+classDiagram
+class Task {
++str description
++str time
++str frequency
++str priority
++bool completed
++date due_date
++mark_complete() Task
+}
+class Pet {
++str name
++str species
++int age
++List~Task~ tasks
++add_task(task) None
++task_count() int
+}
+class Owner {
++str name
++List~Pet~ pets
++add_pet(pet) None
++get_all_tasks() List~Task~
+}
+class Scheduler {
++Owner owner
+}
+Owner "1" *-- "many" Pet : owns
+Pet "1" *-- "many" Task : has
+Scheduler "1" --> "1" Owner : manages
