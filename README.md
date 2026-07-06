@@ -45,7 +45,41 @@ pip install -r requirements.txt
 
 ## Sample Output
 
-Add a real terminal example here after running `python main.py` locally. Paste the output that shows an owner being created, a pet being added, a few tasks being scheduled, and the final sorted schedule (including any conflict warnings).
+Below is real output from running `python main.py` locally, showing the schedule being generated, a conflict being detected, sorting, filtering, and a recurring task being completed.
+
+```text
+Today's Schedule
+
+--------------------------------------------------
+[07:00] Morning walk (high, daily)
+[07:30] Feed breakfast (high, daily)
+[09:00] Flea medication (medium, weekly)
+[09:00] Clean litter box (medium, daily)
+[14:00] Vet appointment (high, once)
+[18:00] Evening walk (high, daily)
+
+Conflict at 09:00: "Flea medication" and "Clean litter box"
+
+--- Sorted by time ---
+[07:00] Morning walk (high, daily)
+[07:30] Feed breakfast (high, daily)
+[09:00] Flea medication (medium, weekly)
+[09:00] Clean litter box (medium, daily)
+[14:00] Vet appointment (high, once)
+[18:00] Evening walk (high, daily)
+
+--- Incomplete tasks ---
+[07:00] Morning walk (high, daily)
+[18:00] Evening walk (high, daily)
+[09:00] Flea medication (medium, weekly)
+[07:30] Feed breakfast (high, daily)
+[09:00] Clean litter box (medium, daily)
+[14:00] Vet appointment (high, once)
+
+--- Completing 'Morning walk' (daily recurring) ---
+Mochi now has 4 tasks (new walk added for tomorrow)
+Last task: [07:00] Morning walk (high, daily)
+```
 
 ## Testing PawPal+
 
