@@ -89,6 +89,20 @@ The `tests/` folder covers the core `Scheduler` behaviors: sorting tasks by time
 pytest
 ```
 
+Actual result from running the suite locally:
+
+```text
+============================= test session starts =============================
+platform win32 -- Python 3.13.14, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\madmin\Documents\ai110-module2show-pawpal-starter
+plugins: anyio-4.14.1
+collected 6 items
+
+tests\test_pawpal.py ...... [100%]
+
+============================== 6 passed in 0.06s ==============================
+```
+
 ## Smarter Scheduling
 
 The table below maps each smarter scheduling feature to the method(s) that implement it in `pawpal_system.py`.
