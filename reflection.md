@@ -36,7 +36,7 @@ I used AI throughout the project for several purposes: generating the initial cl
 
 **b. Judgment and verification**
 
-[TODO: Replace this with your own honest example before submitting.] Describe one moment where you reviewed an AI suggestion critically instead of accepting it outright. For example, if the AI proposed a more complex conflict-detection approach (comparing overlapping time ranges, which would require adding a duration field to Task) and you chose the simpler exact-time-match approach instead, explain what you asked the AI, what it suggested, why you changed or rejected part of it, and how you verified your final approach worked (for example, by running main.py or the test suite).
+One clear example of catching an AI mistake came while I was using AI help to edit files directly on GitHub for this project. When trying to type new content into the reflection.md editor, I kept getting a "Permission denied" error. The AI initially assumed this was some kind of content restriction and tried several workarounds, like shortening the text and removing certain characters, none of which worked. I noticed the explanation didn't quite make sense given what I was asking it to type, so I asked it to slow down and double check what was actually going on. It turned out the real issue was a missing technical parameter in the command being used, not a content problem at all. Once that was identified, the fix worked immediately. This was a good reminder that AI tools can sound confident about a wrong diagnosis, and that it's worth pushing back and asking for a second look when an explanation doesn't quite add up.
 
 ---
 
