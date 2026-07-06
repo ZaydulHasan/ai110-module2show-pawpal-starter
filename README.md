@@ -41,3 +41,31 @@ pip install -r requirements.txt
 5. Add tests to verify key behaviors.
 6. Connect your logic to the Streamlit UI in `app.py`.
 7. Refine UML so it matches what you actually built.
+
+
+## Sample Output
+
+Add a real terminal example here after running `python main.py` locally. Paste the output that shows an owner being created, a pet being added, a few tasks being scheduled, and the final sorted schedule (including any conflict warnings).
+
+## Testing PawPal+
+
+The `tests/` folder covers the core `Scheduler` behaviors: sorting tasks by time, filtering by status and by pet, detecting time conflicts between tasks, and completing tasks (including recurring ones). Run the suite locally with the command below, then paste the real result here, for example six passed in zero point one two seconds.
+
+```bash
+pytest
+```
+
+## Smarter Scheduling
+
+The table below maps each smarter scheduling feature to the method(s) that implement it in `pawpal_system.py`.
+
+| Feature | Method(s) | Notes |
+| --- | --- | --- |
+| Task sorting | `Scheduler.sort_by_time()` | Returns every task for the owner ordered by scheduled time. |
+| Filtering | `Scheduler.filter_by_status()`, `Scheduler.filter_by_pet()` | Lets the UI narrow tasks down to a single pet or completion status. |
+| Conflict handling | `Scheduler.get_conflicts()` | Flags tasks across different pets scheduled at the same time so the owner can reschedule. |
+| Recurring tasks | `Task.mark_complete()`, `Scheduler.complete_task()` | Marks a task done and, for recurring tasks, automatically creates the next occurrence. |
+
+## Demo Walkthrough
+
+A typical run through the app follows four steps. First, the owner enters their name to set up their profile. Second, they add one or more pets with basic info such as name, species, and age. Third, for each pet they add care tasks with a description, scheduled time, priority, and frequency (one time, daily, or weekly). Finally, they generate the schedule, which displays every task sorted by time, highlights any time conflicts between pets, and lets the owner mark tasks complete as the day goes on.
